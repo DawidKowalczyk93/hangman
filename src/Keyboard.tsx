@@ -36,7 +36,7 @@ export function Keyboard () {
             gap: "1rem"
         }}>
             {KEYS.map( key => (
-                <button className={`${styles.btn} ${styles.active}`} key={key}>{key}</button>
+                <button className={`${styles.btn} `} key={key}>{key}</button>
             ))}
         </div>
     )
