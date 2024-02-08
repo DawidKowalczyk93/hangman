@@ -28,7 +28,14 @@ const KEYS = [
     "y",
     "z",
 ]
-export function Keyboard () {
+
+type KeyboardProps = {
+    activeLetters: string[]
+    inactiveLetters: string[]
+    addGuessedLetters: (letter:string) => void
+
+}
+export function Keyboard ({ activeLetters, inactiveLetters, addGuessedLetters }: KeyboardProps) {
     return (
         <div style={{
             display: "grid",
@@ -36,7 +43,7 @@ export function Keyboard () {
             gap: "1rem"
         }}>
             {KEYS.map( key => (
-                <button className={`${styles.btn} `} key={key}>{key}</button>
+                <button onClick={() => addGuessedLetters(key)} className={`${styles.btn} `} key={key}>{key}</button>
             ))}
         </div>
     )

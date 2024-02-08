@@ -59,7 +59,7 @@ function App() {
         <HangManDrawing numberOfGuesses={inCorrectLetters.length} />
         <HangManWord guessedLetters={guessedLetters} wordToGuess={wordToGuess} />
         <div style={{ alignSelf: "stretch"}}>
-            <Keyboard />
+            <Keyboard addGuessedLetters={addGuessedLetters} />
         </div>
 
 
